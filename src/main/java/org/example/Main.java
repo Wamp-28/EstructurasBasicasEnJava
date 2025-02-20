@@ -1,5 +1,9 @@
 package org.example;
 
+import java.sql.SQLOutput;
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -48,9 +52,22 @@ public class Main {
 
         // Condicionales if -else
 
-        double peso=90;
-        double estatura=1.72;
+        // CLASE - OBJETO - INSTANCIA
+        Scanner teclado = new Scanner(System.in);
+        Random ale = new Random();
+
+        int aleatorio = ale.nextInt(100);
+        System.out.println("NUMERO ALEATORIO: " + aleatorio);
+
+        double peso;
+        double estatura;
         double IMC;
+
+        System.out.print("INGRESE SU PESO: ");
+        peso = teclado.nextDouble();
+
+        System.out.print("INGRESE SU ESTATURA: ");
+        estatura = teclado.nextDouble();
 
         IMC = peso /(estatura*estatura);
 
